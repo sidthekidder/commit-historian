@@ -1,6 +1,6 @@
 {
   "name": "commit-historian",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Narrate the story of any file in your git repo — an AI-powered code archaeologist.",
   "type": "module",
   "bin": {

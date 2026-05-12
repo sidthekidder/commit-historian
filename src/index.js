@@ -5,6 +5,8 @@ import { resolve, relative } from "node:path";
 import { streamText } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 
+globalThis.AI_SDK_LOG_WARNINGS = false;
+
 const HELP = `commit-historian — narrate the story of a file in your git repo.
 
 Usage:
