@@ -74,4 +74,3 @@ API.
 ## License
 
 MIT
-## License
