@@ -12,6 +12,7 @@ Usage:
   commit-historian <path> --since v1.0   Limit to commits after a ref/date.
   commit-historian <path> --short        Skip patches; metadata only (cheaper, faster).
   commit-historian <path> --model <id>   Override model (default: claude-sonnet-4-6).
+  commit-historian <path> --dry-run      Print the prompt that would be sent and exit.
   commit-historian --help                Show this help.
 
 Env:
@@ -26,12 +27,13 @@ Examples:
 const MAX_LOG_CHARS = 250_000;
 
 function parseArgs(argv) {
-  const args = { path: null, since: null, short: false, model: "claude-sonnet-4-6", help: false };
+  const args = { path: null, since: null, short: false, dryRun: false, model: "claude-sonnet-4-6", help: false };
   const rest = [];
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--help" || a === "-h") args.help = true;
     else if (a === "--short") args.short = true;
+    else if (a === "--dry-run") args.dryRun = true;
     else if (a === "--since") args.since = argv[++i];
     else if (a === "--model") args.model = argv[++i];
     else if (a.startsWith("--")) die(`Unknown flag: ${a}`);
@@ -102,10 +104,6 @@ async function main() {
     process.stdout.write(HELP);
     process.exit(args.help ? 0 : 1);
   }
-  if (!process.env.ANTHROPIC_API_KEY) {
-    die("ANTHROPIC_API_KEY is not set. Get one at https://console.anthropic.com/");
-  }
-
   ensureGitRepo();
   const { rel } = resolveTrackedPath(args.path);
   const history = collectHistory(rel, { since: args.since, short: args.short });
@@ -120,6 +118,16 @@ ${args.since ? `Since: ${args.since}\n` : ""}
 Git log follows. Each commit begins with "----COMMIT----" and contains: full SHA, author, date, subject, body, and (when present) the patch.
 
 ${history.text}`;
+
+  if (args.dryRun) {
+    process.stderr.write(`# dry-run: ${userPrompt.length} chars in prompt, model=${args.model}, mode=${history.mode}\n\n`);
+    process.stdout.write(`---SYSTEM---\n${SYSTEM_PROMPT}\n\n---USER---\n${userPrompt}\n`);
+    return;
+  }
+
+  if (!process.env.ANTHROPIC_API_KEY) {
+    die("ANTHROPIC_API_KEY is not set. Get one at https://console.anthropic.com/");
+  }
 
   const { textStream } = streamText({
     model: anthropic(args.model),
