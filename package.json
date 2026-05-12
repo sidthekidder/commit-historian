@@ -1,0 +1,34 @@
+{
+  "name": "commit-historian",
+  "version": "0.1.0",
+  "description": "Narrate the story of any file in your git repo — an AI-powered code archaeologist.",
+  "type": "module",
+  "bin": {
+    "commit-historian": "src/index.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "git",
+    "ai",
+    "cli",
+    "history",
+    "claude",
+    "anthropic",
+    "code-archaeology"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@ai-sdk/anthropic": "^2.0.0",
+    "ai": "^6.0.0"
+  }
+}
