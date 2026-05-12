@@ -3,7 +3,7 @@
 > Point it at any file in your git repo. Get a short, vivid narrative of how it came to be.
 
 <p align="center">
-  <img src="./assets/demo.svg" alt="commit-historian example output" width="720"/>
+  <img src="https://raw.githubusercontent.com/sidthekidder/commit-historian/main/assets/demo.svg" alt="commit-historian example output" width="720"/>
 </p>
 
 `commit-historian` is a CLI code archaeologist. It feeds a file's `git log` (with patches) to Claude and asks for a story — with real commit SHAs as anchors — so you can read the *why* behind code, not just the *what*.
