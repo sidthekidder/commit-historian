@@ -8,33 +8,7 @@
 
 `commit-historian` is a CLI code archaeologist. It feeds a file's `git log` (with patches) to Claude and asks for a story — with real commit SHAs as anchors — so you can read the *why* behind code, not just the *what*.
 
-<sub>The image above is an illustrative example. Drop in a real capture from your repo after running it.</sub>
-
-```bash
-$ commit-historian src/auth/middleware.ts
-
-Born `a1b2c3d` on a Sunday afternoon as 20 lines wrapped around
-`jsonwebtoken`, with the kind of confidence that only comes from
-not having a refresh flow yet. The Stripe outage three months
-later disagreed.
-
-Rap sheet:
-- `e4f5a6b` bolted on retry-aware refresh in a panic. Commit
-  message: "fix prod (will clean up tmrw)". It is now 2026.
-- `b7c8d9e` added rate limiting that immediately rate-limited the
-  health check. Reverted in `c8d9e0f`, re-added wrong in `d0e1f2a`.
-- `f0a1b2c` forked the session types into a private file because
-  "the upstream types are stupid". Lived in exile for two months
-  before `d3e4f5a` reunited them, types stupid as ever.
-- The TODO from `c5d6e7f` to "revoke on logout" survived four
-  refactors and three engineers. `9a8b7c6` finally did it, with
-  no fanfare and a one-word commit message ("fine.").
-
-Current state: 280 lines, technically owned by the platform team,
-spiritually owned by whoever last got paged at 3am. Still imports
-`jsonwebtoken`. Still has a Sunday-afternoon comment from 2024
-apologising for things that have since been fixed and broken twice.
-```
+<sub>Image above is an illustrative example. Replace with a real capture from your repo after running it.</sub>
 
 ## Install
 

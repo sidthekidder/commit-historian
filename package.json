@@ -26,6 +26,15 @@
     "anthropic",
     "code-archaeology"
   ],
+  "author": "Siddhartha Sahai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidthekidder/commit-historian.git"
+  },
+  "homepage": "https://github.com/sidthekidder/commit-historian#readme",
+  "bugs": {
+    "url": "https://github.com/sidthekidder/commit-historian/issues"
+  },
   "license": "MIT",
   "dependencies": {
     "@ai-sdk/anthropic": "^2.0.0",
