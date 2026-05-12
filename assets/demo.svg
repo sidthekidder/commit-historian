@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 320" width="780" height="320" role="img" aria-label="commit-historian example output">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 540" width="780" height="540" role="img" aria-label="commit-historian example output">
   <title>commit-historian example output</title>
-  <rect width="780" height="320" rx="10" fill="#1e1e2e"/>
+  <rect width="780" height="540" rx="10" fill="#1e1e2e"/>
   <rect width="780" height="36" rx="10" fill="#181825"/>
   <rect y="26" width="780" height="10" fill="#181825"/>
   <circle cx="20" cy="18" r="6" fill="#f38ba8"/>
@@ -12,17 +12,29 @@
     <text x="20" y="68" fill="#a6e3a1">$</text>
     <text x="34" y="68" fill="#cdd6f4">commit-historian src/auth/middleware.ts</text>
 
-    <text x="20" y="100" fill="#cdd6f4">Born <tspan fill="#94e2d5">`a1b2c3d`</tspan> on a Sunday: 20 lines wrapped around <tspan fill="#fab387">`jsonwebtoken`</tspan>,</text>
-    <text x="20" y="118" fill="#cdd6f4">zero refresh logic, vibes-based. The Stripe outage hit in <tspan fill="#94e2d5">`e4f5a6b`</tspan></text>
-    <text x="20" y="136" fill="#cdd6f4">and the file doubled in a week — <tspan fill="#94e2d5">`b7c8d9e`</tspan> bolted on rate limiting</text>
-    <text x="20" y="154" fill="#cdd6f4">like a screen door on a submarine. <tspan fill="#94e2d5">`f0a1b2c`</tspan> forked the session</text>
-    <text x="20" y="172" fill="#cdd6f4">types into a private copy nobody discussed for two months. The TODO</text>
-    <text x="20" y="190" fill="#cdd6f4">from <tspan fill="#94e2d5">`c5d6e7f`</tspan> to <tspan fill="#fab387">&quot;revoke on logout&quot;</tspan> outlived four refactors and</text>
-    <text x="20" y="208" fill="#cdd6f4">three engineers before <tspan fill="#94e2d5">`9a8b7c6`</tspan> quietly did the thing. Currently</text>
-    <text x="20" y="226" fill="#cdd6f4">280 lines, technically owned by the platform team, spiritually</text>
-    <text x="20" y="244" fill="#cdd6f4">owned by whoever last cried about it.</text>
+    <text x="20" y="100" fill="#cdd6f4">Born <tspan fill="#94e2d5">`a1b2c3d`</tspan> on a Sunday afternoon as 20 lines wrapped around</text>
+    <text x="20" y="118" fill="#cdd6f4"><tspan fill="#fab387">`jsonwebtoken`</tspan>, with the kind of confidence that only comes from</text>
+    <text x="20" y="136" fill="#cdd6f4">not having a refresh flow yet. The Stripe outage three months</text>
+    <text x="20" y="154" fill="#cdd6f4">later disagreed.</text>
 
-    <text x="20" y="280" fill="#a6e3a1">$</text>
-    <rect x="34" y="269" width="8" height="14" fill="#cdd6f4" opacity="0.7"/>
+    <text x="20" y="186" fill="#f9e2af" font-weight="bold">Rap sheet:</text>
+    <text x="20" y="208" fill="#cdd6f4">- <tspan fill="#94e2d5">`e4f5a6b`</tspan> bolted on retry-aware refresh in a panic. Commit</text>
+    <text x="20" y="226" fill="#cdd6f4">  message: <tspan fill="#fab387">&quot;fix prod (will clean up tmrw)&quot;</tspan>. It is now 2026.</text>
+    <text x="20" y="244" fill="#cdd6f4">- <tspan fill="#94e2d5">`b7c8d9e`</tspan> added rate limiting that immediately rate-limited the</text>
+    <text x="20" y="262" fill="#cdd6f4">  health check. Reverted in <tspan fill="#94e2d5">`c8d9e0f`</tspan>, re-added wrong in <tspan fill="#94e2d5">`d0e1f2a`</tspan>.</text>
+    <text x="20" y="280" fill="#cdd6f4">- <tspan fill="#94e2d5">`f0a1b2c`</tspan> forked the session types into a private file because</text>
+    <text x="20" y="298" fill="#cdd6f4">  <tspan fill="#fab387">&quot;the upstream types are stupid&quot;</tspan>. Lived in exile for two months</text>
+    <text x="20" y="316" fill="#cdd6f4">  before <tspan fill="#94e2d5">`d3e4f5a`</tspan> reunited them, types stupid as ever.</text>
+    <text x="20" y="334" fill="#cdd6f4">- The TODO from <tspan fill="#94e2d5">`c5d6e7f`</tspan> to <tspan fill="#fab387">&quot;revoke on logout&quot;</tspan> survived four</text>
+    <text x="20" y="352" fill="#cdd6f4">  refactors and three engineers. <tspan fill="#94e2d5">`9a8b7c6`</tspan> finally did it, with</text>
+    <text x="20" y="370" fill="#cdd6f4">  no fanfare and a one-word commit message (<tspan fill="#fab387">&quot;fine.&quot;</tspan>).</text>
+
+    <text x="20" y="404" fill="#cdd6f4">Current state: 280 lines, technically owned by the platform team,</text>
+    <text x="20" y="422" fill="#cdd6f4">spiritually owned by whoever last got paged at 3am. Still imports</text>
+    <text x="20" y="440" fill="#cdd6f4"><tspan fill="#fab387">`jsonwebtoken`</tspan>. Still has a Sunday-afternoon comment from 2024</text>
+    <text x="20" y="458" fill="#cdd6f4">apologising for things that have since been fixed and broken twice.</text>
+
+    <text x="20" y="500" fill="#a6e3a1">$</text>
+    <rect x="34" y="489" width="8" height="14" fill="#cdd6f4" opacity="0.7"/>
   </g>
 </svg>
