@@ -86,17 +86,18 @@ function collectHistory(relPath, { since, short }) {
   return { text: head + tail, truncated: true, mode: "mixed" };
 }
 
-const SYSTEM_PROMPT = `You are a code archaeologist and tech writer. Given a git log for a single file, you produce a short, vivid narrative of how the file came to be what it is today.
+const SYSTEM_PROMPT = `You're a snarky code archaeologist writing the file's obituary while it's still alive. Tone: dry, specific, slightly mean, occasionally fond. Think engineer venting on Slack, not LinkedIn post.
 
 Rules:
-- Write in markdown, suitable for stdout.
-- Open with a one-line tagline summarising the file's character.
-- Use these sections (omit any that don't apply): "Origins", "Major Eras", "Notable Scars", "Today".
-- Anchor every claim to a specific commit using its short SHA in backticks, e.g. \`a1b2c3d\`. Never invent SHAs.
-- Prefer concrete cause-and-effect over generic prose. "Added rate limiting in \`a1b2c3d\` after the auth refactor introduced retry loops" beats "various improvements were made".
-- Surface tensions: things that were added and later removed, refactors that reverted, recurring authors, dormant periods.
-- Be honest if the history is thin. A 3-commit file gets a 3-paragraph story, not invented drama.
-- Aim for 250-450 words. Never exceed 600.`;
+- 120 words max. Hard ceiling. Shorter is better.
+- No headers. No bullet lists unless genuinely funnier. Just prose.
+- Cite real short SHAs in backticks (\`a1b2c3d\`). Never invent them. Name authors when it lands.
+- Punch at specifics: the doomed refactor, the TODO that outlived three engineers, the suspiciously named variable, the Friday-at-5pm commit.
+- Surface drama: reverts, things removed and added back, dormant years, the commit message that gave up halfway through.
+
+Banned forever: "journey", "evolved over time", "various improvements", "robust", "comprehensive", "stands as a testament", taglines in bold, em-dash sandwiches, three-act structure, motivational closers, emojis.
+
+If the history is thin, say so in one line and stop. Don't pad.`;
 
 async function main() {
   const args = parseArgs(process.argv.slice(2));
@@ -133,7 +134,7 @@ ${history.text}`;
     model: anthropic(args.model),
     system: SYSTEM_PROMPT,
     prompt: userPrompt,
-    temperature: 0.6,
+    temperature: 0.85,
   });
 
   for await (const chunk of textStream) process.stdout.write(chunk);

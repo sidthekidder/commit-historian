@@ -13,29 +13,15 @@
 ```bash
 $ commit-historian src/auth/middleware.ts
 
-**A pragmatic firewall that grew teeth after the 2024 incident.**
-
-## Origins
-Born in `a1b2c3d` as a 20-line Express wrapper around `jsonwebtoken` — no
-refresh logic, no rate limiting, just "is the token valid?". Author: one
-person, one weekend.
-
-## Major Eras
-- **The hardening (Q1 2024).** After the Stripe webhook outage, `e4f5a6b`
-  added retry-aware token refresh and `b7c8d9e` introduced a rate limiter.
-  The file doubled in size in three weeks.
-- **The schism (mid-2024).** `f0a1b2c` split session storage from
-  validation; for two months the file imported its own forked types
-  before `d3e4f5a` cleaned them up.
-
-## Notable Scars
-A dormant `// TODO: revoke on logout` from `c5d6e7f` survived four
-refactors before finally being addressed in `9a8b7c6`.
-
-## Today
-A 280-line module owned by the platform team. Still imports
-`jsonwebtoken`. Still has one weekend's worth of comments from its
-original author.
+Born `a1b2c3d` on a Sunday: 20 lines wrapped around `jsonwebtoken`,
+zero refresh logic, vibes-based. The Stripe outage hit in `e4f5a6b`
+and the file doubled in a week — `b7c8d9e` bolted on rate limiting
+like a screen door on a submarine. `f0a1b2c` forked the session
+types into a private copy nobody discussed for two months. The TODO
+from `c5d6e7f` to "revoke on logout" outlived four refactors and
+three engineers before `9a8b7c6` quietly did the thing. Currently
+280 lines, technically owned by the platform team, spiritually
+owned by whoever last cried about it.
 ```
 
 ## Install

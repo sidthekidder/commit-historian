@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 560" width="780" height="560" role="img" aria-label="commit-historian example output">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 320" width="780" height="320" role="img" aria-label="commit-historian example output">
   <title>commit-historian example output</title>
-  <rect width="780" height="560" rx="10" fill="#1e1e2e"/>
+  <rect width="780" height="320" rx="10" fill="#1e1e2e"/>
   <rect width="780" height="36" rx="10" fill="#181825"/>
   <rect y="26" width="780" height="10" fill="#181825"/>
   <circle cx="20" cy="18" r="6" fill="#f38ba8"/>
@@ -12,32 +12,17 @@
     <text x="20" y="68" fill="#a6e3a1">$</text>
     <text x="34" y="68" fill="#cdd6f4">commit-historian src/auth/middleware.ts</text>
 
-    <text x="20" y="100" fill="#f9e2af" font-weight="bold">A pragmatic firewall that grew teeth after the 2024 incident.</text>
+    <text x="20" y="100" fill="#cdd6f4">Born <tspan fill="#94e2d5">`a1b2c3d`</tspan> on a Sunday: 20 lines wrapped around <tspan fill="#fab387">`jsonwebtoken`</tspan>,</text>
+    <text x="20" y="118" fill="#cdd6f4">zero refresh logic, vibes-based. The Stripe outage hit in <tspan fill="#94e2d5">`e4f5a6b`</tspan></text>
+    <text x="20" y="136" fill="#cdd6f4">and the file doubled in a week — <tspan fill="#94e2d5">`b7c8d9e`</tspan> bolted on rate limiting</text>
+    <text x="20" y="154" fill="#cdd6f4">like a screen door on a submarine. <tspan fill="#94e2d5">`f0a1b2c`</tspan> forked the session</text>
+    <text x="20" y="172" fill="#cdd6f4">types into a private copy nobody discussed for two months. The TODO</text>
+    <text x="20" y="190" fill="#cdd6f4">from <tspan fill="#94e2d5">`c5d6e7f`</tspan> to <tspan fill="#fab387">&quot;revoke on logout&quot;</tspan> outlived four refactors and</text>
+    <text x="20" y="208" fill="#cdd6f4">three engineers before <tspan fill="#94e2d5">`9a8b7c6`</tspan> quietly did the thing. Currently</text>
+    <text x="20" y="226" fill="#cdd6f4">280 lines, technically owned by the platform team, spiritually</text>
+    <text x="20" y="244" fill="#cdd6f4">owned by whoever last cried about it.</text>
 
-    <text x="20" y="135" fill="#89b4fa" font-weight="bold">## Origins</text>
-    <text x="20" y="155" fill="#cdd6f4">Born in <tspan fill="#94e2d5">`a1b2c3d`</tspan> as a 20-line Express wrapper around</text>
-    <text x="20" y="173" fill="#cdd6f4"><tspan fill="#fab387">`jsonwebtoken`</tspan> — no refresh logic, no rate limiting, just</text>
-    <text x="20" y="191" fill="#cdd6f4">&quot;is the token valid?&quot;.</text>
-
-    <text x="20" y="221" fill="#89b4fa" font-weight="bold">## Major Eras</text>
-    <text x="20" y="241" fill="#cdd6f4">- <tspan font-weight="bold">The hardening (Q1 2024).</tspan> After the Stripe webhook</text>
-    <text x="20" y="259" fill="#cdd6f4">  outage, <tspan fill="#94e2d5">`e4f5a6b`</tspan> added retry-aware refresh and</text>
-    <text x="20" y="277" fill="#cdd6f4">  <tspan fill="#94e2d5">`b7c8d9e`</tspan> introduced a rate limiter. File doubled</text>
-    <text x="20" y="295" fill="#cdd6f4">  in three weeks.</text>
-    <text x="20" y="313" fill="#cdd6f4">- <tspan font-weight="bold">The schism (mid-2024).</tspan> <tspan fill="#94e2d5">`f0a1b2c`</tspan> split session</text>
-    <text x="20" y="331" fill="#cdd6f4">  storage from validation; for two months the file</text>
-    <text x="20" y="349" fill="#cdd6f4">  imported its own forked types.</text>
-
-    <text x="20" y="379" fill="#89b4fa" font-weight="bold">## Notable Scars</text>
-    <text x="20" y="399" fill="#cdd6f4">A <tspan fill="#fab387">`// TODO: revoke on logout`</tspan> from <tspan fill="#94e2d5">`c5d6e7f`</tspan> survived</text>
-    <text x="20" y="417" fill="#cdd6f4">four refactors before <tspan fill="#94e2d5">`9a8b7c6`</tspan> finally addressed it.</text>
-
-    <text x="20" y="447" fill="#89b4fa" font-weight="bold">## Today</text>
-    <text x="20" y="467" fill="#cdd6f4">280-line module owned by the platform team. Still</text>
-    <text x="20" y="485" fill="#cdd6f4">imports <tspan fill="#fab387">`jsonwebtoken`</tspan>. Still has weekend-project</text>
-    <text x="20" y="503" fill="#cdd6f4">comments from its author.</text>
-
-    <text x="20" y="535" fill="#a6e3a1">$</text>
-    <rect x="34" y="524" width="8" height="14" fill="#cdd6f4" opacity="0.7"/>
+    <text x="20" y="280" fill="#a6e3a1">$</text>
+    <rect x="34" y="269" width="8" height="14" fill="#cdd6f4" opacity="0.7"/>
   </g>
 </svg>
