@@ -2,7 +2,13 @@
 
 > Point it at any file in your git repo. Get a short, vivid narrative of how it came to be.
 
+<p align="center">
+  <img src="./assets/demo.svg" alt="commit-historian example output" width="720"/>
+</p>
+
 `commit-historian` is a CLI code archaeologist. It feeds a file's `git log` (with patches) to Claude and asks for a story — with real commit SHAs as anchors — so you can read the *why* behind code, not just the *what*.
+
+<sub>The image above is an illustrative example. Drop in a real capture from your repo after running it.</sub>
 
 ```bash
 $ commit-historian src/auth/middleware.ts
@@ -47,6 +53,7 @@ commit-historian <path>                  # full history with patches
 commit-historian <path> --short          # metadata only, faster + cheaper
 commit-historian <path> --since v1.0     # limit to a ref or date
 commit-historian <path> --model <id>     # override model
+commit-historian <path> --dry-run        # print the prompt; no API call
 ```
 
 Requires `ANTHROPIC_API_KEY` in your environment. Defaults to
